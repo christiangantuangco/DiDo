@@ -1,12 +1,8 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace DiDo.Models;
 
-public class Entry
+public class EntryViewModel
 {
     public required int Id { get; set; }
-    public required int UserId { get; set; }
     public required string Description { get; set; }
-    [DataType(DataType.Date)]
     public required DateTime Date { get; set; }
 }

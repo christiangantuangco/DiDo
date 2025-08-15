@@ -1,0 +1,25 @@
+@model DiDo.Models.LoginViewModel
+
+<div class="login">
+    <form asp-action="Login" method="post">
+        <div class="form-group">
+            <label asp-for="UsernameOrEmail" class="control-label"></label>
+            <input asp-for="UsernameOrEmail" class="form-control" />
+            <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Sign in" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Register">Don't have an account? Register here.</a>
+</div>
