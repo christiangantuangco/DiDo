@@ -1,0 +1,13 @@
+@model IEnumerable<DiDo.Models.Entry>
+
+<h2>All Entries</h2>
+
+@foreach (Entry entry in Model)
+{
+    <div class="entry-item">
+        <label>Description:</label>
+        <p>@entry.Description</p>
+        <p><strong>Date:</strong> @entry.Date.ToShortDateString()</p>
+        <a asp-action="Details" asp-controller="Entry" asp-route-id=@entry.Id>View Details</a>
+    </div>
+}
